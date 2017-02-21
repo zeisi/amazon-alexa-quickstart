@@ -1,0 +1,33 @@
+{
+  "session": {
+    "sessionId": "SessionId.daa8d46f-3bd8-489e-896e-5fea4da0c0b8",
+    "application": {
+      "applicationId": "testAppId"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "testid"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.9e6c2ceb-1281-4b31-9b5a-a2e40f1dfade",
+    "locale": "de-DE",
+    "timestamp": "2017-02-17T18:00:54Z",
+    "intent": {
+      "name": "GetEventSchedule",
+      "slots": {
+        "Location": {
+          "name": "Location",
+          "value": "Vienna"
+        },
+        "Intentdate": {
+          "name": "Intentdate",
+          "value": "2017-02-02"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

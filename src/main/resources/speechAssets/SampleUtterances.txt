@@ -1,0 +1,2 @@
+GetEventData Tell me about the location in {Location}
+GetEventData Tell me about event in {Location} on {Intentdate}
