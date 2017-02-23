@@ -1,2 +1,4 @@
-GetEventData Tell me about the location in {Location}
+GetEventData Tell me about the location  {Location}
+GetEventData Information about {Location}
 GetEventData Tell me about event in {Location} on {Intentdate}
+GetEventData Events on {Intentdate} at {Location}
