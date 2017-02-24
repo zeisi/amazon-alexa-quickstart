@@ -25,8 +25,13 @@ public class ScheduleSpeechlet implements Speechlet {
 	@Override
 	public void onSessionStarted(final SessionStartedRequest request, final Session session) throws SpeechletException {
 		log.info("onSessionStarted requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
-
 		// any initialization logic goes here
+	}
+	
+	@Override
+	public void onSessionEnded(final SessionEndedRequest request, final Session session) throws SpeechletException {
+		log.info("onSessionEnded requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+		// any cleanup logic goes here
 	}
 
 	@Override
@@ -55,7 +60,7 @@ public class ScheduleSpeechlet implements Speechlet {
 			throw new SpeechletException("Invalid Intent");
 		}
 		
-		// I'd call this event routing
+		// I'd call this Intent routing
 		switch (intentName) {
         case "GetEventSchedule":
         	return EventScheduleService.getNextEvent(intent);
@@ -75,17 +80,5 @@ public class ScheduleSpeechlet implements Speechlet {
         	throw new SpeechletException("Invalid Intent");
 		}
 	}
-
-	@Override
-	public void onSessionEnded(final SessionEndedRequest request, final Session session) throws SpeechletException {
-		log.info("onSessionEnded requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
-
-		// any cleanup logic goes here
-	}
-
-	
-	
-
-
 
 }
